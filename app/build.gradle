@@ -22,3 +22,9 @@ android {
         }
     }
 }
+
+// Remove old Kotlin JDK compatibility modules
+configurations.configureEach {
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk7'
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk8'
+}
